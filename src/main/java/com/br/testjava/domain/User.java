@@ -15,6 +15,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.br.testjava.dto.UserDto;
+
 
 @Entity
 @Table(name="user")
@@ -24,6 +26,17 @@ public class User {
 	private String name;
 	private String email;
 	private List<Address> address;
+	
+	public User() {
+		
+	}
+	public User(UserDto user) {
+		this.userId = user.getUserId();
+		this.name = user.getName();
+		this.email = user.getEmail();
+		this.address = user.getAddress();
+	}
+	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

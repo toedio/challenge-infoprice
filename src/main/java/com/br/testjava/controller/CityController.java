@@ -10,19 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.br.testjava.dao.CityDAO;
-import com.br.testjava.domain.City;
+import com.br.testjava.dto.CityDto;
+import com.br.testjava.service.CityService;
 
 @Controller
 @RequestMapping("/api/cities")
 public class CityController {
+	
 	@Autowired
-	private CityDAO cityDao;
+	private CityService cityService;
 	
 
 	@RequestMapping(method=RequestMethod.GET, headers="Accept=application/json")
 	@ResponseBody
-	public List<City> listAll() {
-		return cityDao.findAll();		
+	public List<CityDto> listAll() {
+		return cityService.findAll();	
 	}
 }

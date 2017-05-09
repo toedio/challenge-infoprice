@@ -51,7 +51,7 @@ public class Address {
 		return neighborhood;
 	}
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name="city_id", nullable=false)
 	@Fetch(FetchMode.JOIN)
 	public City getCity() {
