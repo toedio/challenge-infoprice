@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt" ng-app="testjava">
+<html lang="pt" data-ng-app="testjava">
     <head>
         <title>Test Java</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <base href="/">
 
         <!--JavaScript Lib-->
         <script src="lib/angular/angular.min.js"></script>
         <script src="lib/angular-resource/angular-resource.min.js"></script>
+        <script src="lib/angular-route/angular-route.min.js"></script>
         
         <!--CSS Lib-->
        
@@ -17,14 +19,21 @@
 
         <!-- JavaScript Custom -->
         <script src="modules/app.js"></script>
+        <script src="modules/routes.js"></script>
         <script src="modules/city/config/city.client.config.js"></script>
         <script src="modules/user/config/user.client.config.js"></script>
         <script src="modules/city/service/city.client.service.js"></script>
+        <script src="modules/user/service/user.client.service.js"></script>
         <script src="modules/user/controller/user.client.controller.js"></script>
        
     </head>
-        <div data-ng-include=""></div>       
-    <body data-ng-controller="UserController">
+    <header>
         <div data-ng-include=""></div>
+    </header>    
+    <body>
+        <div data-ng-view=""></div>
     </body>
+    <footer>
+        <div data-ng-include=""></div>
+    </footer>
 </html>

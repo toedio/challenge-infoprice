@@ -3,10 +3,10 @@
 
     angular
         .module('testjava.city')
-        .factory('City', City);
+        .factory('Cities', Cities);
 
-    City.inject = ['$resource'];
-    function City($resource) {
+    Cities.inject = ['$resource'];
+    function Cities($resource) {
 
         return $resource('/api/cities/:cityId', 
         {

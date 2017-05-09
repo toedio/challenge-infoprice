@@ -5,8 +5,8 @@
         .module('testjava.user')
         .controller('UserController', UserController);
 
-    UserController.inject = ['$scope', 'City'];
-    function UserController($scope, City) {
-        $scope.city = City.query();
+    UserController.inject = ['$scope', 'Cities'];
+    function UserController($scope, Cities) {
+        $scope.cities = Cities.query();
     }
 })();
