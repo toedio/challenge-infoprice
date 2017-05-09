@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="testjava">
+    <head>
+        <title>Test Java</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--JavaScript Lib-->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular-resource/angular-resource.min.js"></script>
+        
+        <!--CSS Lib-->
+       
+
+        <!--CSS Custom-->
+        <link rel="stylesheet" href="lib/css/style.css" charset="utf-8" />
+
+        <!-- JavaScript Custom -->
+        <script src="modules/app.js"></script>
+        <script src="modules/city/config/city.client.config.js"></script>
+        <script src="modules/user/config/user.client.config.js"></script>
+        <script src="modules/city/service/city.client.service.js"></script>
+        <script src="modules/user/controller/user.client.controller.js"></script>
+       
+    </head>
+        <div data-ng-include=""></div>       
+    <body data-ng-controller="UserController">
+        <div data-ng-include=""></div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "testjava",
+  "version": "1.0.0",
+  "description": "Test application with java, springboot",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toedio/test-java-springboot.git"
+  },
+  "keywords": [
+    "java",
+    "Spring",
+    "Springboot",
+    "HSQLDB"
+  ],
+  "author": "Victor Ferrera <toedio@yahoo.com.br>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toedio/test-java-springboot/issues"
+  },
+  "homepage": "https://github.com/toedio/test-java-springboot#readme"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "test-java-springboot",
+  "homepage": "https://github.com/toedio/test-java-springboot",
+  "authors": [
+    "Victor Ferreira da Silva <toedio@yahoo.com.br>"
+  ],
+  "description": "Test application with java, spring data, spring, boot, jpa",
+  "main": "",
+  "keywords": [
+    "java",
+    "spring",
+    "HSQLDB",
+    "Spring",
+    "Boot",
+    "Spring",
+    "Data"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "bootstrap": "^3.3.7"
+  }
+}
