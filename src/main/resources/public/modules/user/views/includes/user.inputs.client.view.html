@@ -1,0 +1,39 @@
+<form name="userForm" data-ng-init="initFormUser()">
+  <div class="form-group col-md-6">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" data-ng-model="user.name" required>
+  </div>
+ <div class="form-group col-md-6">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" placeholder="E-mail" data-ng-model="user.email" required>
+  </div>
+  <div class="form-group">
+      <label> Address </label> <a href="javascript:;" data-ng-click="addAddress(user)"> Add</a>
+   <div class="form-group" data-ng-repeat="address in user.address">
+    <h5> Address {{ $index + 1 }} <small><a href="javascript:;" data-ng-click="removeAddress(user.address, $index)">Remove</a> </small></h5>
+    <div class="form-group col-md-6">
+        <label for="route">Route</label>
+        <input type="text" class="form-control" id="route" placeholder="Routel" data-ng-model="address.route">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="streetNumber">Street Number</label>
+        <input type="text" class="form-control" id="streetNumber" placeholder="Street Number" data-ng-model="address.streetNumber">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="neighborhood">Neighborhood</label>
+        <input type="text" class="form-control" id="neighborhood" placeholder="Neighborhood" data-ng-model="address.neighborhood">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="city">City</label>
+        <select class="form-control" data-ng-options="city.cityId as city.cityName for city in cities" data-ng-model="address.city.cityId"></select>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="additionalInfo">Postal code</label>
+        <input type="text" class="form-control" id="additionalInfo" placeholder="Postal code" data-ng-model="address.postalCode">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="additionalInfo">Additional Info</label>
+        <input type="text" class="form-control" id="additionalInfo" placeholder="Additional Info" data-ng-model="address.additionalInfo">
+    </div>    
+  </div>
+</form>

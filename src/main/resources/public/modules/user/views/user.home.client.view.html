@@ -1,1 +1,37 @@
-test view home client
+<div class="container-fluid t-user-home" data-ng-init="initList()">
+    <div class="row t-search-section">
+        <div class="col-md-6 col-md-offset-3">            
+            <div class="form-group">  
+                <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                <input type="text" class="form-control" id="search" placeholder="Search" data-ng-model="searchText">
+                </div>
+            </div>
+        </div>    
+        <div class="col-md-2">
+            <button class="btn btn-primary" data-ng-click="goToCreate()"><span class="glyphicon glyphicon-plus"></span> New </button>
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-md-3 t-user-card" data-ng-repeat="user in users | filter:searchText">
+            <div class="panel panel-default ">
+                <div class="panel-heading t-user-super-head">
+                    <div class="t-user-head pull-left">#{{ $index + 1 }} <b>{{ user.name }}</b></div>                    
+                    <span class="glyphicon glyphicon-trash pull-right t-icon-action" data-ng-click="remove(user, $index)" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-pencil pull-right t-icon-action" data-ng-click="goToEdit(user)" aria-hidden="true"></span>
+                </div>
+                <div class="panel-body">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{ user.email }} <br />
+                    <blockquote class="t-address-title"> Addresses <span class="label label-default">{{ user.address.length || 0 }}</span> </blockquote>
+                    <div class="text-center" data-ng-if="user.address.length === 0">
+                        <h3> No registered address </h3>
+                    </div>
+                    <div class="t-address-list" >
+                        <div class="t-single-address" data-ng-repeat="address in user.address" data-ng-bind="formatAddress(address)">                            
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,6 @@
         <title>Test Java</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <base href="/">
 
         <!--JavaScript Lib-->
         <script src="lib/angular/angular.min.js"></script>
@@ -12,7 +11,7 @@
         <script src="lib/angular-route/angular-route.min.js"></script>
         
         <!--CSS Lib-->
-       
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />       
 
         <!--CSS Custom-->
         <link rel="stylesheet" href="lib/css/style.css" charset="utf-8" />
@@ -28,12 +27,12 @@
        
     </head>
     <header>
-        <div data-ng-include=""></div>
+        <div data-ng-include="'modules/core/views/head.client.view.html'"></div>
     </header>    
     <body>
         <div data-ng-view=""></div>
     </body>
     <footer>
-        <div data-ng-include=""></div>
+        <div data-ng-include="'modules/core/views/footer.client.view.html'"></div>
     </footer>
 </html>

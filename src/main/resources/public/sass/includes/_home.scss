@@ -1,3 +1,43 @@
-html, body {
-    margin: 10px;
+.t-user-home {
+    .t-address-title {
+        font-size: 15px;
+        padding: 5px 0 2px 5px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+
+    .t-address-list {
+        max-height: 100px;
+        overflow-y: auto;
+        .t-single-address {
+            border: 1px solid #ccc;
+            width: 84%;
+            margin: 5px 0 0 2%;
+            padding: 2%;
+            border-radius: 10px;
+        }
+    }
+
+    .t-user-card {
+        margin: 10px auto;
+        .panel-body {
+            height: 186px;
+        }
+    }
+    .t-icon-action {
+        margin: 1px 5px;
+        font-size: 17px;
+        &:hover {
+            color: #666;
+        }
+
+    }
+    .t-user-super-head {
+        padding: 10px 5px 30px 10px;
+        cursor: pointer;
+        
+    }
+    .t-search-section {
+        padding: 30px 10px;
+    }
 }
