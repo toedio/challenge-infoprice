@@ -1,5 +1,5 @@
 {
-  "name": "test-java-springboot",
+  "name": "testjava",
   "homepage": "https://github.com/toedio/test-java-springboot",
   "authors": [
     "Victor Ferreira da Silva <toedio@yahoo.com.br>"
@@ -10,10 +10,8 @@
     "java",
     "spring",
     "HSQLDB",
-    "Spring",
-    "Boot",
-    "Spring",
-    "Data"
+    "SpringBoot",
+    "Spring"
   ],
   "license": "MIT",
   "ignore": [

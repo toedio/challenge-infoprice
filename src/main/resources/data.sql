@@ -13,7 +13,6 @@ INSERT INTO user (user_id, user_name, user_email) VALUES
     (955, 'Flávia Pires', 'p_fla2010@terra.com.br');
 
 INSERT INTO user_address (address_route, address_street_number, address_additional_info, address_neighborhood, city_id, address_postal_code, user_id) VALUES 
-    ('Rua Florida', '1379', 'Casa A', 'Barcelona', 1002, '09551-000', 951),
     ('Rua Flórida', '1379', 'Casa A', 'Barcelona', 1002, '09551-000', 951),
     ('Av. Pres. Kenndy', '958', '', 'Santa Paula', 1002, '09551-050', 951),
     ('Av. Dr. Isaias Salomão', '129', 'Ap. 21', 'Saúde', 1001, '04547-985', 951),

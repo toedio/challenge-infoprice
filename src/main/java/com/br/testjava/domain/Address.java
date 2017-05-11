@@ -1,6 +1,5 @@
 package com.br.testjava.domain;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,58 +30,72 @@ public class Address {
 	public Long getAddressId() {
 		return addressId;
 	}
-	public void setAddressId(Long addressId) {
-		this.addressId = addressId;
+	
+	@Column(name="user_id")
+	public Long getUserId() {
+		return userId;
 	}
+	
 	@Column(name="address_route")
 	public String getRoute() {
 		return route;
 	}
+	
 	@Column(name="address_street_number")
 	public String getStreetNumber() {
 		return streetNumber;
 	}
+	
 	@Column(name="address_additional_info")
 	public String getAdditionalInfo() {
 		return additionalInfo;
 	}
+	
 	@Column(name="address_neighborhood")
 	public String getNeighborhood() {
 		return neighborhood;
 	}
 	
 	@ManyToOne()
-	@JoinColumn(name="city_id", nullable=false)
+	@JoinColumn(name="city_id")
 	@Fetch(FetchMode.JOIN)
 	public City getCity() {
 		return city;
 	}
+	
 	@Column(name="address_postal_code")
 	public String getPostalCode() {
 		return postalCode;
 	}
+	
+	public void setAddressId(Long addressId) {
+		this.addressId = addressId;
+	}
+	
 	public void setRoute(String route) {
 		this.route = route;
 	}
+	
 	public void setStreetNumber(String streetNumber) {
 		this.streetNumber = streetNumber;
 	}
+	
 	public void setAdditionalInfo(String additionalInfo) {
 		this.additionalInfo = additionalInfo;
 	}
+	
 	public void setNeighborhood(String neighborhood) {
 		this.neighborhood = neighborhood;
 	}
+	
 	public void setCity(City city) {
 		this.city = city;
 	}
+	
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
-	@Column(name="user_id")
-	public Long getUserId() {
-		return userId;
-	}
+	
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}

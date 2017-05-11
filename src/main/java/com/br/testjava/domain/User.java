@@ -30,42 +30,49 @@ public class User {
 	public User() {
 		
 	}
+	
 	public User(UserDto user) {
 		this.userId = user.getUserId();
 		this.name = user.getName();
 		this.email = user.getEmail();
 		this.address = user.getAddress();
-	}
-	
+	}	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long getUserId() {
 		return userId;
 	}
-	@Column(name="user_name", nullable=false)
+	
+	@Column(name="user_name")
 	public String getName() {
 		return name;
 	}
-	@Column(name="user_email", nullable=false)
+	
+	@Column(name="user_email")
 	public String getEmail() {
 		return email;
 	}
+	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	@Fetch(FetchMode.JOIN)
 	public List<Address> getAddress() {
 		return address;
 	}
+	
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	public void setAddress(List<Address> address) {
 		this.address = address;
 	}

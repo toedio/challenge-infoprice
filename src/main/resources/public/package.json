@@ -1,7 +1,7 @@
 {
   "name": "testjava",
   "version": "1.0.0",
-  "description": "Test application with java, springboot",
+  "description": "Test application with java, spring data, spring, boot, jpa",
   "dependencies": {
     "gulp": "^3.9.1"
   },
@@ -16,14 +16,11 @@
   },
   "keywords": [
     "java",
-    "Spring",
-    "Springboot",
-    "HSQLDB"
+    "spring",
+    "HSQLDB",
+    "SpringBoot",
+    "Spring"
   ],
-  "author": "Victor Ferrera <toedio@yahoo.com.br>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toedio/test-java-springboot/issues"
-  },
-  "homepage": "https://github.com/toedio/test-java-springboot#readme"
+  "author": "Victor Ferreira da Silva <toedio@yahoo.com.br>",
+  "license": "MIT"
 }

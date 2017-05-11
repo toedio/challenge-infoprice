@@ -70,7 +70,7 @@
                 user.$remove(function (response) {
                     $scope.users.splice(idx, 1);
                 }, function(err) {
-                    alert('Failed to remove');
+                    alert('Failed to remove user. Try again later');
                 })
             }
         };
